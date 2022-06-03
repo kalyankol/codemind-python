@@ -1,18 +1,15 @@
-z=int(input())
-r=0
-rev=0
-n=z
-p=n*n
-while n:
-    m=n%10
-    r=(r*10)+m
-    n=n//10
-c=r*r
-while c:
-    a=c%10
-    rev=(rev*10)+a
-    c=c//10
-if p==rev:
-    print("True")
+def r(n):
+    s=[int(i) for i in str(n)]
+    w=s[::-1]
+    m=''.join([str(i) for i in w])
+    j=int(m)
+    return j
+n=int(input())#12
+s=n**2#144
+q=r(n)#21
+h=q**2#441
+k=r(h)#144
+if k==s:
+    print(True)
 else:
-    print("False")
+    print(False)
