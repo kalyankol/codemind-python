@@ -1,0 +1,12 @@
+n=int(input())
+a=list(map(int,input().split()))
+c=0
+for i in a:
+    if i==0:
+        c+=1
+    elif i%2==0:
+        c+=1
+if c==len(a):
+    print(True)
+else:
+    print(False)
