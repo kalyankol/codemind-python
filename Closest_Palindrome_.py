@@ -1,33 +1,27 @@
-def pal(k):
-    n=[int(i) for i in str(k)]
-    m=n[::-1]
-    l=''.join([str(i) for i in m])
-    if int(l)==k:
-        return True
+def is_pali(o):
+    t=o
+    rev=0
+    while o!=0:
+        r=o%10
+        rev=rev*10+r
+        o//=10
+    if rev==t:
+        return 1
     else:
-        return False
+        return 0
 n=int(input())
-b=[]
-i=1
-j=1
-while(1):
-    q=n+i
-    if(pal(q)):
-        b.append(q)
+for i in range(1,10000):
+    if is_pali(n+i):
+        m=n+i
         break
-    i+=1
-while(1):
-    l=n-j
-    if(pal(l)):
-        b.append(l)
+for i in range(1,10000):
+    if is_pali(n-i):
+        l=n-i
         break
-    j+=1
-if abs(max(b)-n)==abs(n-min(b)):
-    print(min(b),max(b))
+if n-l==m-n:
+    print(l,m)
+elif n-l>m-n:
+    print(m)
 else:
-    print(min(b))
-    
-    
-    
-    
+    print(l)
     
