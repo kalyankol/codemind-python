@@ -1,12 +1,8 @@
 n=int(input())
 a=list(map(int,input().split()))
-c=0
+s=True
 for i in a:
-    if i==0:
-        c+=1
-    elif i%2==0:
-        c+=1
-if c==len(a):
-    print(True)
-else:
-    print(False)
+    if i%2!=0:
+        s=False
+        break
+print(s)    
