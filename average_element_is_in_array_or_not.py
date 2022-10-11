@@ -2,14 +2,8 @@ n=int(input())
 a=list(map(int,input().split()))
 s=0
 for i in a:
-    s=s+i
-m=s//n
-c=0
-for i in a:
-    if i==m:
-        c+=1
-if c!=0:
+    s+=i
+if a.count(int(s/len(a)))>=1:
     print(True)
 else:
     print(False)
-       
