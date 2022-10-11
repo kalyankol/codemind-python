@@ -1,7 +1,6 @@
 n=int(input())
 a=list(map(int,input().split()))
-s=[]
-for i in range(len(a)):
+for i in range(len(a)-1,-1,-1):
     if a[i]%2==0:
-        s.append(i)
-print(max(s))        
+        print(i)
+        break
