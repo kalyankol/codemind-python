@@ -1,7 +1,6 @@
 n=int(input())
 a=list(map(int,input().split()))
-s=[]
-for i in a:
-    if i%2==0:
-        s.append(i)
-print(s[-1])        
+for i in range(len(a)):
+    if(a[i]%2==0):
+        s=a[i]
+print(s)        
