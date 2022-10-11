@@ -1,9 +1,7 @@
 n=int(input())
 a=list(map(int,input().split()))
-s=int(input())
-for i in a:
-    if i==s:
-        print(True)
-        break
+k=int(input())
+if a.count(k)>=1:
+    print(True)
 else:
     print(False)
