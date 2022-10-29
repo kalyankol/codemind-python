@@ -1,0 +1,16 @@
+n=int(input())
+a,b=0,1
+f=[0,1]
+while(1):
+    c=a+b
+    f.append(c)
+    if(c>n):
+        break
+    a=b
+    b=c
+if(abs(n-f[-1])<abs(n-f[-2])):
+    print(f[-1])
+elif(abs(n-f[-1])==abs(n-f[-2])):
+    print(f[-2],f[-1])
+else:
+    print(f[-2])
