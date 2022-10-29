@@ -1,0 +1,13 @@
+n=int(input())
+a,b=0,1
+f=[0,1]
+c=2
+while(1):
+    d=a+b
+    f.append(d)
+    c+=1
+    if(c==n):
+        break
+    a=b
+    b=d
+print(*f)    
