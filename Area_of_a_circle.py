@@ -1,4 +1,2 @@
-r=int(input())
-c=3.14*r*r
-x="{:.2f}".format(c)
-print(x)
+n=(int(input())**2)*3.14
+print("{:.2f}".format(n))
