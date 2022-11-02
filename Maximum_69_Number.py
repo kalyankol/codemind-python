@@ -1,9 +1,7 @@
 n=input()
 n=list(n)
 for i in range(len(n)):
-    if n[i]=="6":
-        n[i]="9"
+    if n[i]=='6':
+        n[i]='9'
         break
-n="".join(n)
-print(n)
-        
+print(''.join(n))        
